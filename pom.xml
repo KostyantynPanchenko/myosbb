@@ -64,9 +64,7 @@
     <profiles>
         <profile>
             <id>main</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
+            
             <build>
                 <plugins>
                     <!-- disable tests during maven build -->
@@ -90,6 +88,9 @@
 
         <profile>
             <id>mariadb</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <build>
                 <plugins>
                     <plugin>
@@ -110,8 +111,9 @@
             </properties>
 
         </profile>
-
-        <profile>
+    </profiles>
+</project>
+        <!--profile>
             <id>jenkins</id>
             <build>
                 <plugins>
@@ -140,7 +142,7 @@
                 <db.username>h2</db.username>
                 <db.password>h2</db.password>
             </properties>
-        </profile>
-    </profiles>
+        </profile-->
+   
 
-</project>
+
